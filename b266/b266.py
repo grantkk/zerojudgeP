@@ -20,21 +20,21 @@ while True:
         for i in range(r):
             row = list(map(int, input().split()))
             matrixOri.append(row)
-        opra = list(input().split(' '))
+        opra = list(input().split(" "))
         opra = opra[::-1]
         for i in range(len(opra)):
             # print(f"Operation:{opra[i]}:")
-            if opra[i] == '0':
+            if opra[i] == "0":
                 # print("旋轉")
                 temp = []
                 matrixtemp = []
-                for j in range(len(matrixOri[0])-1, -1, -1):
+                for j in range(len(matrixOri[0]) - 1, -1, -1):
                     for k in range(len(matrixOri)):
                         temp.append(matrixOri[k][j])
                     matrixtemp.append(temp.copy())
                     temp = []
                 matrixOri = matrixtemp
-                # print(matrixOri)
+                # print(*matrixOri)
             else:
                 # print("翻轉")
                 matrixOri.reverse()
@@ -42,13 +42,15 @@ while True:
                 #     matrixOri[j], matrixOri[len(
                 #         matrixOri)-j-1] = matrixOri[len(matrixOri)-j-1], matrixOri[j]
 
-                # print(matrixOri)
+                # print(*matrixOri)
 
         print(len(matrixOri), len(matrixOri[0]))
         # print(matrixOri)
         for i in range(len(matrixOri)):
             for j in range(len(matrixOri[0])):
-                print(matrixOri[i][j], end=' ')
+                print(matrixOri[i][j], end="")
+                if j != (len(matrixOri[0])-1):
+                    print(' ', end="")
             print("")
         # for i in range(len(matrixOri)):
         #     print(' '.join(str(matrixOri[i])))
@@ -90,4 +92,3 @@ while True:
 #         print()
 #     except:
 #         break
-
