@@ -1,5 +1,3 @@
-import pprint
-
 n, m = map(int, input().split())
 
 lsts = []
@@ -10,8 +8,6 @@ for i in range(n):
     lsts.append(lst)
     maxnums.append(max(lst))
 
-# pprint.pprint(lsts)
-# pprint.pprint(maxnums)
 sum1 = sum(maxnums)
 print(sum1)
 s = ""

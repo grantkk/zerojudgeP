@@ -13,7 +13,3 @@ for i in range(n):
         groups.append(group)
 
 print(len(groups))
-
-# print(groups)
-# print(friend)
-# print(mark)
