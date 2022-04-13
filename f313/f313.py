@@ -61,5 +61,5 @@ for i in range(r):
         if (minimum > rows[i][j]) and rows[i][j] > 0:
             minimum = rows[i][j]
 
-print(maximum)
 print(minimum)
+print(maximum)
